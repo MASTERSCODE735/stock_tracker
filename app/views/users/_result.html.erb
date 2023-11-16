@@ -1,0 +1,14 @@
+<%= render 'layouts/message' %>
+
+<% if @stock %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Stock Details
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Company Name: <%= @stock.name %></li>
+      <li class="list-group-item">Company Symbol: <%= @stock.ticker %></li>
+      <li class="list-group-item">Present Stock Price: <%= @stock.last_price %></li>
+    </ul>
+  </div>
+<% end %>

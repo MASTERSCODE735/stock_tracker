@@ -1,0 +1,19 @@
+
+<div class="search-area">
+  <h2> Search Stocks </h2>
+  <%= form_tag('stock_search', method: "get", remote: true) do %>
+    <div class="form-group row">
+      <div class="col-sm-9 no-right-padding">
+        <%= text_field_tag(:query,params[:query], class: 'form-control', placeholder: "Search here") %>
+      </div>
+      <div class="col-sm-3 no-left-padding">
+        <%= button_tag type: :submit,class: "btn btn-success" do %>
+          <%= fa_icon 'search' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br>
+
+<%= render "stocks/list_stocks" %>
